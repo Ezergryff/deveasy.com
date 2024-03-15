@@ -1,0 +1,141 @@
+/* ?This is where reusable styling of this template will be. 
+   !Will contain things like:
+   * Button styling
+   * Background color styling
+   * padding and margin
+*/
+
+.container {
+    max-width: var(--width-medium);
+    margin: 0 auto;
+    padding: 1rem 2rem;
+  }
+
+  /* Buttons */
+.contact_btn {
+    display: inline-block;
+    padding: 13px;
+    border-radius: 30px;
+    background-color: #000000;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 17px;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+}
+  
+  /* add hover to resume button */
+.contact_btn:hover {
+    background-color: #0099ff;
+}
+
+.cv_btn {
+    display: inline-block;
+    padding: 17px;
+    border-radius: 30px;
+    background-color: #000000;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 13px;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+    
+}
+  
+.cv_btn:hover {
+    background-color: #0099ff;
+}
+
+.cv_en_btn {
+  display: inline-block;
+  padding: 17px;
+  border-radius: 30px;
+  background-color: #000000;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 13px;
+  transition: background-color 0.3s ease;
+}
+
+.cv_en_btn:hover {
+  background-color: #0099ff;
+}
+
+.submit_btn{
+    
+  display: inline-block; /* Afficher le bouton sur une ligne entière */
+  padding: 0.5rem 1rem; /* Ajoute un espace de 0.5 rem autour du bouton */
+  border: none; /* Supprimer les bordures du bouton */
+  border-radius: 0.25rem; /* Arrondir les coins du bouton */
+  background-color: #0c84e6; /* Définir une couleur de fond pour le bouton */
+  color: #fff; /* Définir une couleur de texte pour le bouton */
+  cursor: pointer; /* Définir un pointeur de souris pour le bouton */
+  transition: background-color 0.5s ease; /* Ajouter une animation de fond au bouton */
+}
+
+.submit_btn:hover {
+  background-color: #000000; /* Définir une couleur de fond différente pour le bouton lorsque la souris est sur le bouton */
+}
+
+  /* Header Container */
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8rem;
+    padding: 1rem;
+  }
+  
+  .header-container > div {
+    margin-top: 1rem;
+  }
+  
+  .content-text {
+    text-align: center;
+    margin: 1.5rem 0;
+  }
+  
+  .content-text h2 {
+    font-size: 3rem;
+    line-height: 1.2;
+    transition: 0.2s ease-in-out;
+  }
+  
+  .content-text p {
+    padding: 0.5rem;
+    margin: 0 auto;
+    max-width: 700px;
+  }
+  
+
+/* Media queries pour les appareils mobiles et tous les autres écrans */
+@media only screen and (max-width: 1200px) {
+  /* Buttons */
+  .contact_btn,
+  .cv_btn,
+  .cv_en_btn,
+  .submit_btn {
+    padding: 2vw; /* Utiliser vw pour le rembourrage */
+    font-size: 3vw; /* Utiliser vw pour la taille de la police */
+    margin: 1vw; /* Utiliser vw pour la marge */
+  }
+
+  /* Header Container */
+  .header-container {
+    margin-top: 3rem; /* Conserver la marge supérieure fixe pour les appareils mobiles */
+  }
+
+  /* Content Text */
+  .content-text h2 {
+    font-size: 2.5vw; /* Utiliser vw pour la taille de la police */
+  }
+
+  .content-text p {
+    font-size: 1.5vw; /* Utiliser vw pour la taille de la police */
+    max-width: 90vw; /* Utiliser vw pour la largeur maximale */
+  }
+}
+
+/* Autres styles pour les écrans plus larges que 1200px */
+/* Vous pouvez ajouter d'autres règles CSS ici pour les écrans plus larges si nécessaire */

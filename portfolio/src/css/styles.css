@@ -1,0 +1,347 @@
+/* This is the required project styling. Will contain essential CSS styles like:
+   * Flex property
+   * Grid layout
+*/
+
+/* variables */
+:root {
+  /* Colors */
+  --bg-primary: #ffffff;
+  --text-color: #222222;
+  --text-color-two: #ffffff;
+  --bg-secondary: #000000;
+
+
+  /* Font Weight */
+  --weight-small: 400;
+  --weight-semibold: 600;
+  --weight-bold: 800;
+
+  /* Max width */
+  --width-small: 600px;
+  --width-medium: 1100px;
+  --width-large: 1300px;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+/* Reset default styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+/* Main styling */
+body {
+    font-family: "Raleway", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom , #3036b1, #969ae2);
+    height: 100vh; /* Pour couvrir toute la hauteur de la fenêtre */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+main {
+  flex: 1;
+  overflow-y: auto;
+}
+
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  background-color: #292828;
+  width: 100%;
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 20;
+  height: 80px;
+  width: 100%;
+}
+
+.navbar .nav-buttons {
+    margin-right: -200px;
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar .nav-link {
+    padding: 0.75rem 1.9rem;
+    background-color: #6f00ff;
+    color: #ffffff;
+    border-radius: 30px;
+    margin: 15px;
+  font-size: 15px;
+  
+}
+
+#logo img {
+  display: block;
+  width: 90px;
+  height: 90px;
+  margin-left: -200px;
+}
+
+.navbar .btn {
+  margin-right: 1.5rem;
+}
+
+.fas.fa-arrow-right {
+  margin-left: 0.5rem;
+  font-size: 0.9rem;
+}
+
+
+/* Hero section */
+#hero {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.profile-image {
+  width: 150px;
+  border-radius: 50%;
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+.division {
+  width: 100%;
+  height: 2px;
+  background-color: var(--card-background);
+  margin: 5.5rem 0;
+}
+
+/* contact*/
+
+ /* Form*/
+ form {
+  margin: auto;
+  height: 430px;
+  width: 700px; /* Définir une largeur maximale pour le formulaire */
+  padding: 1.5rem; /* Ajoute un espace de 1.5 rem autour du formulaire */
+  background-color: #5e5e5e; /* Définir une couleur de fond pour le formulaire */
+  border-radius: 20px; /* Arrondir les coins du formulaire */
+  margin-top: 150px;
+
+}
+
+.form-group {
+  margin-bottom: 1rem; /* Ajoute un espace de 1 rem entre chaque groupe de formulaires */
+}
+
+.form-control {
+  width: 100%; /* Définir explicitement la largeur des champs de formulaire */
+  padding: 30px; /* Ajoute un espace de 0.5 rem autour des champs de formulaire */
+  border: none; /* Supprimer les bordures des champs de formulaire */
+  border-radius: 20px; /* Arrondir les coins des champs de formulaire */
+  background-color: #ffffff; /* Définir une couleur de fond pour les champs de formulaire */
+  resize: none; /* Empêcher les utilisateurs de redimensionner les zones de texte */
+}
+
+.form-control:focus {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ajouter une ombre lorsque les champs de formulaire sont focus */
+}
+
+
+
+
+
+/* Projects*/
+.loader {
+    border: 7px solid #505050; /* couleur de la bordure */
+    border-top: 5px solid #ffffff; /* couleur du loader */
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 3s linear infinite; /* animation pour faire tourner */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px; /* pour centrer verticalement */
+    margin-left: -25px; /* pour centrer horizontalement */
+    z-index: 999; /* pour placer au-dessus de tout le contenu */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.nothing_here {
+    position: absolute;
+    top: 65%;
+    left: 35%;
+
+}
+
+/*About*/
+header {
+  position: relative;
+}
+header .title{
+  margin-top: 130px;
+}
+header .me{
+
+  width: 1000px;
+  height: 250px;
+  line-height: 40px;
+  text-align: center;
+  margin-top: 80px;
+  font-size: 23px;
+
+}
+
+/* Footer */
+footer {
+  background: #292828;
+  color: rgb(255, 255, 255);
+  width: 100%;
+  padding: 1rem;
+  height: 130px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .container {
+    min-height: 20px;
+  flex-direction: column;
+  color: #ffffff;
+  text-align: center;
+}
+
+footer a {
+  font-size: 0.8rem;
+  color: #ffffff;
+}
+
+footer a:hover {
+  opacity: 0.6;
+}
+
+footer .social {
+  margin: 0.9rem 0;
+}
+
+footer .social img {
+  width: 35px;
+  height: 35px;
+}
+
+footer .social a {
+  margin: 0 0.5rem;
+}
+
+footer p {
+  font-size: 0.8rem;
+}
+/* Media queries pour les appareils mobiles et tous les autres écrans */
+@media only screen and (max-width: 1200px) {
+  /* Navbar */
+  .navbar .container {
+    height: 10vw; /* Réduire la hauteur pour les appareils mobiles */
+  }
+
+  #logo img {
+    width: 8vw; /* Réduire la taille du logo pour les appareils mobiles */
+    height: 8vw; /* Réduire la taille du logo pour les appareils mobiles */
+  }
+
+  .navbar .nav-buttons {
+    margin-right: 1vw; /* Ajuster la marge pour les appareils mobiles */
+    margin-left: -8vw; /* Ajuster la marge pour les appareils mobiles */
+  }
+
+  .navbar .nav-link {
+    padding: 2vw 4vw; /* Réduire le rembourrage pour les appareils mobiles */
+    margin: 1vw 2vw; /* Ajuster la marge pour les appareils mobiles */
+    font-size: 3vw; /* Réduire la taille de la police pour les appareils mobiles */
+  }
+
+  /* Form */
+  form {
+    width: 80vw;
+    height: 80vw; /* Adapter la largeur pour les appareils mobiles */
+    margin-top: 10vh; /* Réduire la marge supérieure pour les appareils mobiles */
+  }
+
+  .form-control {
+    padding: 4vw; /* Réduire le rembourrage pour les appareils mobiles */
+  }
+
+  /* Loader */
+  .loader {
+    width: 8vw; /* Réduire la taille pour les appareils mobiles */
+    height: 8vw; /* Réduire la taille pour les appareils mobiles */
+    margin-top: -15vw; /* Adapter pour les appareils mobiles */
+    margin-left: -4vw; /* Adapter pour les appareils mobiles */
+  }
+
+  /* Nothing here */
+  .nothing_here {
+    margin-bottom: 5vh;
+    margin-top: -15vh; /* Adapter pour les appareils mobiles */
+    margin-left: -2vw; /* Adapter pour les appareils mobiles */
+    margin-right: 30vw; /* Adapter pour les appareils mobiles */
+    font-size: 3vw; /* Adapter la taille de la police pour les appareils mobiles */
+  }
+
+  /* About */
+  header .me {
+    width: 80vw; /* Adapter la largeur pour les appareils mobiles */
+    margin-top: 1vh; /* Réduire la marge supérieure pour les appareils mobiles */
+    font-size: 3vw; /* Adapter la taille de la police pour les appareils mobiles */
+    line-height: 5vw; /* Adapter la hauteur de ligne pour les appareils mobiles */
+  }
+
+  /* Footer */
+  footer {
+    height: auto; /* Réinitialiser la hauteur pour les appareils mobiles */
+  }
+
+  footer p {
+    font-size: 3vw; /* Adapter la taille de la police pour les appareils mobiles */
+  }
+}
